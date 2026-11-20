@@ -1,0 +1,315 @@
+/* Apertura */
+.apertura {
+  position: relative;
+  overflow: hidden;
+  margin: 0 -20px 20px;
+  padding: 3rem 1.25rem 2.5rem;
+  text-align: center;
+  background-color: #05050F;
+}
+
+.apertura h1 {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 1rem;
+  color: var(--color-acento);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* 1. Hiperespacio: el fondo de estrellas se desplaza sin parar */
+@keyframes viajar {
+  from { background-position: 0 0, 0 0; }
+  to   { background-position: -400px 0, -200px 0; }
+}
+
+.hiperespacio {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.8;
+  background-image:
+    radial-gradient(circle, #FFFFFF 1px, transparent 1.5px),
+    radial-gradient(circle, #9FD3FF 1px, transparent 1.5px);
+  background-size: 80px 60px, 130px 90px;
+  animation: viajar 8s linear infinite;
+}
+
+/* 2. Texto de apertura en perspectiva */
+.escenario {
+  position: relative;
+  z-index: 1;
+  height: 260px;
+  overflow: hidden;
+  perspective: 300px;
+}
+
+@keyframes alejar {
+  0%   { transform: rotateX(25deg) translateY(100%); opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: rotateX(25deg) translateY(-160%); opacity: 0; }
+}
+
+.texto-apertura {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--color-acento);
+  font-size: 1.35rem;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: justify;
+  transform-origin: 50% 100%;
+
+  animation-name: alejar;
+  animation-duration: 22s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.episodio-apertura {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* animation-play-state: pausa con el mouse */
+.escenario:hover .texto-apertura {
+  animation-play-state: paused;
+}
+
+/* 3. Botón como sable: el brillo se enciende y se apaga */
+@keyframes zumbido {
+  from { box-shadow: 0 0 6px 1px #3FA9F5; }
+  to   { box-shadow: 0 0 22px 6px #3FA9F5; }
+}
+
+.boton-sable {
+  position: relative;
+  z-index: 2;
+  margin-top: 1rem;
+  padding: 0.8em 1.8em;
+  border: 2px solid #BFE6FF;
+  border-radius: 2em;
+  background: linear-gradient(to right, #1C6FB0, #3FA9F5);
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  animation: zumbido 1.2s ease-in-out infinite alternate;
+}
+
+/* 4. Entrada suave de las secciones: animation-fill-mode */
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(25px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.entrada {
+  animation: aparecer 0.9s ease-out both;
+}
+
+.seccion.entrada:nth-of-type(3) {
+  animation-delay: 0.3s;
+}
+
+/* Plugin bxSlider: flechas dibujadas con CSS */
+.bx-wrapper {
+  margin-bottom: 40px;
+  border: 1px solid rgba(255, 212, 71, 0.3);
+  background: #05050F;
+  box-shadow: none;
+}
+
+.bx-wrapper img {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+}
+
+.bx-wrapper .bx-controls-direction a {
+  width: 44px;
+  height: 44px;
+  margin-top: -22px;
+  border-radius: 50%;
+  background: rgba(11, 11, 26, 0.75);
+  border: 1px solid var(--color-acento);
+  text-indent: 0;
+  text-align: center;
+  line-height: 42px;
+  font-size: 0;
+}
+
+.bx-wrapper .bx-prev::before,
+.bx-wrapper .bx-next::before {
+  font-size: 22px;
+  color: var(--color-acento);
+}
+
+.bx-wrapper .bx-prev::before { content: "‹"; }
+.bx-wrapper .bx-next::before { content: "›"; }
+
+.bx-wrapper .bx-caption {
+  background: rgba(11, 11, 26, 0.85);
+}
+
+.bx-wrapper .bx-caption span {
+  color: var(--color-acento);
+  font-size: 1rem;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: rgba(255, 212, 71, 0.4);
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: var(--color-acento);
+}
+
+/* Plugin Timelinr */
+.nota-linea {
+  font-size: 0.9rem;
+  color: #C9C9D6;
+}
+
+.timeline-scroll {
+  overflow-x: auto;
+}
+
+#timeline {
+  position: relative;
+  width: 800px;
+  height: 380px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #0B0B1A url("../media/img/timeline/dot.gif") left 45px repeat-x;
+}
+
+#dates {
+  width: 800px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#dates li {
+  float: left;
+  width: 100px;
+  height: 50px;
+  list-style: none;
+  text-align: center;
+  font-size: 22px;
+  background: url("../media/img/timeline/biggerdot.png") center bottom no-repeat;
+}
+
+#dates a {
+  line-height: 38px;
+  color: #FFFFCC;
+  text-decoration: none;
+  transition: font-size 0.5s, color 0.5s;
+}
+
+#dates .selected {
+  font-size: 34px;
+  color: var(--color-acento);
+}
+
+#issues {
+  width: 800px;
+  height: 320px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#issues li {
+  float: left;
+  width: 800px;
+  height: 320px;
+  list-style: none;
+}
+
+#issues li img {
+  float: left;
+  width: 175px;
+  height: 256px;
+  margin: 20px 40px 10px 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  transform: scale(0.75);
+  transition: transform 1.5s ease-in-out;
+}
+
+#issues li.selected img {
+  transform: scale(1);
+}
+
+#issues li h3 {
+  margin: 40px 0 10px;
+  font-size: 44px;
+  color: var(--color-acento);
+}
+
+#issues li p {
+  margin-right: 80px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#grad_left,
+#grad_right {
+  position: absolute;
+  top: 0;
+  width: 70px;
+  height: 380px;
+}
+
+#grad_left  { left: 0;  background: url("../media/img/timeline/grad_left.png") repeat-y; }
+#grad_right { right: 0; background: url("../media/img/timeline/grad_right.png") repeat-y; }
+
+#next,
+#prev {
+  position: absolute;
+  top: 170px;
+  font-size: 40px;
+  color: var(--color-acento);
+  text-decoration: none;
+}
+
+#next { right: 15px; }
+#prev { left: 15px; }
+
+/* Media queries de esta sesión */
+
+/* AND + orientación: celular en horizontal */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .escenario {
+    height: 180px;
+  }
+}
+
+/* Celular: texto de apertura más pequeño */
+@media screen and (max-width: 480px) {
+  .apertura {
+    margin: 0 -10px 20px;
+  }
+
+  .texto-apertura {
+    font-size: 1.05rem;
+  }
+}
+
+/* Sin animaciones si el sistema pide reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .hiperespacio,
+  .texto-apertura,
+  .boton-sable,
+  .entrada {
+    animation: none;
+  }
+
+  .texto-apertura {
+    transform: none;
+  }
+}

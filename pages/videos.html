@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <title>Videos de Star Wars | Tráileres y video de fondo</title>
+  <meta name="description" content="Tráiler de Star Wars en YouTube con video responsive, video HTML5 del Halcón Milenario y video de fondo." />
+  <meta name="keywords" content="Star Wars, videos, tráiler, Halcón Milenario" />
+
+  <!-- Estilos -->
+  <link rel="icon" type="image/png" href="../media/favicon/favicon-32.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="../media/favicon/favicon.ico" />
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/estilo.css" />
+</head>
+
+<body>
+
+  <a href="#contenido" class="saltar">Saltar al contenido</a>
+
+  <!-- Video de fondo -->
+  <video id="fondo" autoplay muted loop playsinline aria-hidden="true"
+         poster="../media/img/space.jpg">
+    <source src="../media/video/fondo-espacio.mp4" type="video/mp4" />
+    <source src="../media/video/fondo-espacio.webm" type="video/webm" />
+  </video>
+
+  <header id="cabecera">
+
+    <a href="../index.html" class="marca">
+      <img src="../media/img/logo-star-wars.png" alt="Star Wars: ir a la página de inicio" />
+    </a>
+
+    <nav id="menu" aria-label="Menú principal">
+      <ul>
+        <li><a href="../index.html">
+          <i class="fa-solid fa-house" aria-hidden="true"></i> Inicio</a></li>
+        <li><a href="../index.html#sobre">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i> La saga</a></li>
+        <li><a href="../index.html#nave">
+          <i class="fa-solid fa-rocket" aria-hidden="true"></i> La nave</a></li>
+        <li class="con-submenu">
+          <a href="peliculas.html">
+            <i class="fa-solid fa-film" aria-hidden="true"></i> Películas</a>
+          <ul class="submenu">
+            <li><a href="peliculas.html#precuelas">Precuelas</a></li>
+            <li><a href="peliculas.html#originales">Trilogía original</a></li>
+            <li><a href="peliculas.html#secuelas">Secuelas</a></li>
+          </ul>
+        </li>
+        <li><a href="videos.html" aria-current="page">
+          <i class="fa-solid fa-play" aria-hidden="true"></i> Videos</a></li>
+        <li><a href="academia.html">
+          <i class="fa-solid fa-jedi" aria-hidden="true"></i> Academia</a></li>
+        <li><a href="holocron.html">
+          <i class="fa-solid fa-cube" aria-hidden="true"></i> Holocrón</a></li>
+        <li><a href="cronologia.html"><i class="fa-solid fa-timeline" aria-hidden="true"></i> Cronología</a></li>
+        <li><a href="../index.html#enlaces">
+          <i class="fa-solid fa-link" aria-hidden="true"></i> Enlaces</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <h1 class="titulo-pagina">Videos</h1>
+    <p class="intro-pagina">
+      El fondo de esta página es un <strong>video</strong> en bucle, fijado detrás de todo
+      con <code>position: fixed</code> y <code>z-index: -100</code>.
+    </p>
+
+    <!-- YouTube responsive -->
+    <section id="trailer" class="seccion" aria-labelledby="titulo-trailer">
+      <h2 id="titulo-trailer"><i class="fa-brands fa-youtube" aria-hidden="true"></i> Tráiler en YouTube</h2>
+      <p>
+        Se quitó el <code>width</code> y <code>height</code> del código de «Compartir → Incorporar»
+        y se colocó el <code>iframe</code> dentro de un contenedor que mantiene la proporción 16:9.
+      </p>
+
+      <div class="video-responsive">
+
+        <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/8FZ7k-q7f9E?si=BY7OPVIVeOz8SUYi"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        loading="lazy"
+        allowfullscreen></iframe>
+
+      </div>
+
+      <aside class="aviso">
+        <p>
+          <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+          <strong>¿Ves «Error 153»?</strong> Abriste el HTML con doble clic (<code>file://</code>): no hay un sitio web
+          que YouTube pueda identificar, así que bloquea el video. Ábrelo con <strong>Live Server</strong> (<code>http://</code>) y funcionará.
+        </p>
+      </aside>
+
+      <p class="nota-codigo">.video-responsive      { position: relative; padding-bottom: 56.25%; height: 0; }
+.video-responsive iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</p>
+
+      <p><small>
+        Alternativa moderna (Sesión 6): <code>iframe { width: 100%; aspect-ratio: 16 / 9; }</code>.
+        Para Vimeo el procedimiento es el mismo: «Compartir → Insertar» y pegar el <code>iframe</code>.
+      </small></p>
+    </section>
+
+    <!-- <video> con MP4 + WebM -->
+    <section id="video-local" class="seccion" aria-labelledby="titulo-local">
+      <h2 id="titulo-local"><i class="fa-solid fa-film" aria-hidden="true"></i> El Halcón cruza el espacio</h2>
+      <p>
+        Video propio con <code>controls</code>, <code>loop</code> y <code>poster</code>.
+        El navegador intenta primero el MP4; si no puede, prueba el WebM; si tampoco,
+        muestra el texto alternativo.
+      </p>
+
+      <video class="video-local" width="640" height="360"
+             controls loop muted preload="metadata"
+             poster="../media/img/poster-halcon.jpg">
+        <source src="../media/video/halcon-640x360.mp4" type="video/mp4" />
+        <source src="../media/video/halcon-640x360.webm" type="video/webm" />
+        <p>Lo sentimos, tu navegador no puede reproducir video.
+          <a href="../media/video/halcon-640x360.mp4">Descarga el video en MP4</a>.</p>
+      </video>
+
+      <h3>Reproducir desde un momento concreto</h3>
+      <p>Con <code>#t=3,6</code> al final del <code>src</code>, el video se reproduce solo del segundo 3 al 6.</p>
+
+      <video class="video-local" width="640" height="360" controls muted preload="metadata"
+             poster="../media/img/poster-halcon.jpg"
+             src="../media/video/halcon-640x360.mp4#t=3,6">
+        <p>Lo sentimos, tu navegador no puede reproducir video.</p>
+      </video>
+    </section>
+
+    <aside class="dato-curioso" aria-labelledby="titulo-formatos">
+      <h2 id="titulo-formatos"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> MP4 vs. WebM</h2>
+      <p>
+        <strong>MP4</strong> (códec H.264) es el estándar más compatible.
+        <strong>WebM</strong> (códecs VP8/VP9) es la alternativa libre creada por Google para HTML5.
+        Ofrecer ambos con <code>&lt;source&gt;</code> garantiza que el video se vea en cualquier navegador.
+      </p>
+    </aside>
+
+  </main>
+
+  <footer id="pie">
+    <address>
+      <p><i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        <a href="mailto:contacto@lasagaskywalker.pe">contacto@lasagaskywalker.pe</a></p>
+    </address>
+    <p><a href="../index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Volver a la página de inicio</a></p>
+    <p><small>Sitio de práctica del curso Diseño y Desarrollo Web · ISIL</small></p>
+  </footer>
+
+  <a href="#contenido" id="btn-arriba" aria-label="Volver arriba">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </a>
+
+</body>
+
+</html>

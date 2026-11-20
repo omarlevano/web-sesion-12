@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Cronología de la saga | Star Wars</title>
+  <meta name="description" content="Cronología de Star Wars: banner animado, línea de tiempo de las nueve películas, texto de apertura animado y la elección del lado de la Fuerza." />
+
+  <link rel="icon" type="image/png" href="../media/favicon/favicon-32.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Estilos de los plugins (antes que los propios) -->
+  <link rel="stylesheet" href="../css/plugins/jquery.bxslider.css" />
+  <link rel="stylesheet" href="../css/plugins/sweetalert2.min.css" />
+
+  <link rel="stylesheet" href="../css/estilo.css" />
+  <!-- Estilos de esta sesión -->
+  <link rel="stylesheet" href="../css/sesion11.css" />
+
+  <!-- Solo al imprimir -->
+  <link rel="stylesheet" href="../css/impresion.css" media="print" />
+</head>
+
+<body>
+
+  <a href="#contenido" class="saltar">Saltar al contenido</a>
+
+  <header id="cabecera">
+    <a href="../index.html" class="marca">
+      <img src="../media/img/logo-star-wars.png" alt="Star Wars: ir a la página de inicio" />
+    </a>
+
+    <nav id="menu" aria-label="Menú principal">
+      <ul>
+        <li><a href="../index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Inicio</a></li>
+        <li><a href="peliculas.html"><i class="fa-solid fa-film" aria-hidden="true"></i> Películas</a></li>
+        <li><a href="academia.html"><i class="fa-solid fa-jedi" aria-hidden="true"></i> Academia</a></li>
+        <li><a href="holocron.html"><i class="fa-solid fa-cube" aria-hidden="true"></i> Holocrón</a></li>
+        <li><a href="cronologia.html" aria-current="page"><i class="fa-solid fa-timeline" aria-hidden="true"></i> Cronología</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- Animaciones con @keyframes -->
+    <section class="apertura">
+      <div class="hiperespacio" aria-hidden="true"></div>
+
+      <h1 class="titulo-flex">Cronología de la saga</h1>
+
+      <div class="escenario">
+        <div class="texto-apertura">
+          <p class="episodio-apertura">Una guía para aprendices</p>
+          <p>Nueve películas, tres trilogías y más de cuarenta años de historia.
+             En esta página recorrerás la saga en el orden en que llegó a los cines,
+             desde 1977 hasta 2019.</p>
+          <p>Antes de empezar, el Consejo necesita saber algo importante:
+             ¿de qué lado de la Fuerza estás?</p>
+        </div>
+      </div>
+
+      <button type="button" id="elegir-lado" class="boton-sable">
+        <i class="fa-solid fa-jedi" aria-hidden="true"></i> Elegir mi lado
+      </button>
+    </section>
+
+    <!-- Banner animado con el plugin bxSlider -->
+    <section class="seccion entrada" aria-labelledby="titulo-banner">
+      <h2 id="titulo-banner">Galería de la saga</h2>
+
+      <div class="banner">
+        <div><img src="../media/img/halcon-1280x760.png" title="El Halcón Milenario: la nave más rápida de la galaxia" alt="El Halcón Milenario visto de frente" /></div>
+        <div><img src="../media/img/space.jpg" title="Tres trilogías, una misma galaxia" alt="Planeta y naves en el espacio" /></div>
+        <div><img src="../media/img/poster-halcon.jpg" title="Que la Fuerza te acompañe" alt="El Halcón Milenario cruzando el espacio" /></div>
+      </div>
+    </section>
+
+    <!-- Línea de tiempo con el plugin Timelinr -->
+    <section class="seccion entrada" aria-labelledby="titulo-linea">
+      <h2 id="titulo-linea">Las nueve películas en el tiempo</h2>
+      <p class="nota-linea">Usa las flechas del teclado o los botones + y −.</p>
+
+      <div class="timeline-scroll">
+        <div id="timeline">
+          <ul id="dates">
+            <li><a href="#e1977">1977</a></li>
+            <li><a href="#e1980">1980</a></li>
+            <li><a href="#e1983">1983</a></li>
+            <li><a href="#e1999">1999</a></li>
+            <li><a href="#e2002">2002</a></li>
+            <li><a href="#e2005">2005</a></li>
+            <li><a href="#e2015">2015</a></li>
+            <li><a href="#e2017">2017</a></li>
+            <li><a href="#e2019">2019</a></li>
+          </ul>
+          <ul id="issues">
+            <li id="e1977">
+              <img src="../media/img/episodios/episodio-4.jpg" alt="Póster del Episodio IV: Una Nueva Esperanza" />
+              <h3>1977</h3>
+              <p><strong>Episodio IV: Una Nueva Esperanza.</strong> Luke Skywalker deja Tatooine y se une a la Rebelión para rescatar a la princesa Leia.</p>
+            </li>
+            <li id="e1980">
+              <img src="../media/img/episodios/episodio-5.jpg" alt="Póster del Episodio V: El Imperio Contraataca" />
+              <h3>1980</h3>
+              <p><strong>Episodio V: El Imperio Contraataca.</strong> Luke entrena con Yoda en Dagobah mientras el Imperio persigue a la Rebelión.</p>
+            </li>
+            <li id="e1983">
+              <img src="../media/img/episodios/episodio-6.jpg" alt="Póster del Episodio VI: El Retorno del Jedi" />
+              <h3>1983</h3>
+              <p><strong>Episodio VI: El Retorno del Jedi.</strong> La Rebelión ataca la nueva Estrella de la Muerte y Luke enfrenta su destino.</p>
+            </li>
+            <li id="e1999">
+              <img src="../media/img/episodios/episodio-1.jpg" alt="Póster del Episodio I: La Amenaza Fantasma" />
+              <h3>1999</h3>
+              <p><strong>Episodio I: La Amenaza Fantasma.</strong> Dos Jedi descubren a un niño llamado Anakin Skywalker en Tatooine.</p>
+            </li>
+            <li id="e2002">
+              <img src="../media/img/episodios/episodio-2.jpg" alt="Póster del Episodio II: El Ataque de los Clones" />
+              <h3>2002</h3>
+              <p><strong>Episodio II: El Ataque de los Clones.</strong> Anakin, ya aprendiz, protege a Padmé mientras estalla la Guerra de los Clones.</p>
+            </li>
+            <li id="e2005">
+              <img src="../media/img/episodios/episodio-3.jpg" alt="Póster del Episodio III: La Venganza de los Sith" />
+              <h3>2005</h3>
+              <p><strong>Episodio III: La Venganza de los Sith.</strong> Anakin cae al lado oscuro y la República se convierte en Imperio.</p>
+            </li>
+            <li id="e2015">
+              <img src="../media/img/episodios/episodio-7.jpg" alt="Póster del Episodio VII: El Despertar de la Fuerza" />
+              <h3>2015</h3>
+              <p><strong>Episodio VII: El Despertar de la Fuerza.</strong> Rey, una chatarrera de Jakku, descubre que la Fuerza también la llama.</p>
+            </li>
+            <li id="e2017">
+              <img src="../media/img/episodios/episodio-8.jpg" alt="Póster del Episodio VIII: Los Últimos Jedi" />
+              <h3>2017</h3>
+              <p><strong>Episodio VIII: Los Últimos Jedi.</strong> Rey busca a Luke en un planeta remoto para aprender de él.</p>
+            </li>
+            <li id="e2019">
+              <img src="../media/img/episodios/episodio-9.jpg" alt="Póster del Episodio IX: El Ascenso de Skywalker" />
+              <h3>2019</h3>
+              <p><strong>Episodio IX: El Ascenso de Skywalker.</strong> La Resistencia libra la batalla final contra el regreso de Palpatine.</p>
+            </li>
+          </ul>
+          <div id="grad_left"></div>
+          <div id="grad_right"></div>
+          <a href="#" id="next" aria-label="Película siguiente">+</a>
+          <a href="#" id="prev" aria-label="Película anterior">-</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="pie">
+    <p><a href="../index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Volver a la página de inicio</a></p>
+    <p><small>Sitio de práctica del curso Diseño y Desarrollo Web · ISIL</small></p>
+  </footer>
+
+  <a href="#contenido" id="btn-arriba" aria-label="Volver arriba">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </a>
+
+  <!-- Scripts: jQuery, plugins y código propio -->
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/jquery.fontflex.js"></script>
+  <script src="../js/jquery.bxslider.js"></script>
+  <script src="../js/sweetalert2.all.min.js"></script>
+  <script src="../js/jquery.timelinr-0.9.7.js"></script>
+  <script src="../js/cronologia.js"></script>
+
+</body>
+
+</html>

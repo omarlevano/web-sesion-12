@@ -1,0 +1,33 @@
+/* Fuera lo que no sirve en papel */
+#cabecera,
+#btn-arriba,
+.saltar,
+button,
+.hiperespacio,
+.escenario,
+.bx-controls,
+#next,
+#prev {
+  display: none !important;
+}
+
+/* Tinta negra sobre fondo blanco: ahorra tinta y se lee mejor */
+body,
+.seccion,
+.apertura,
+#timeline {
+  background: white !important;
+  color: black !important;
+  box-shadow: none !important;
+}
+
+/* Sin animaciones al imprimir */
+* {
+  animation: none !important;
+}
+
+/* Los enlaces externos muestran su dirección entre paréntesis */
+a[href^="http"]::after {
+  content: " (" attr(href) ")";
+  font-size: 0.85em;
+}

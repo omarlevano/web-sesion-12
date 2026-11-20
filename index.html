@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <title>Star Wars | La saga Skywalker | Historia, películas y orden cronológico</title>
+  <meta name="description"
+        content="Guía de la saga Skywalker de Star Wars: las nueve películas, el orden cronológico de la historia, el Halcón Milenario y videos." />
+  <meta name="keywords" content="Star Wars, saga Skywalker, películas, orden cronológico, Halcón Milenario" />
+  <meta name="author" content="Curso Diseño y Desarrollo Web · ISIL" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="media/favicon/favicon-32.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="media/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" href="media/favicon/apple-touch-icon.png" />
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/estilo.css" />
+</head>
+
+<body>
+
+  <!-- Saltar al contenido -->
+  <a href="#contenido" class="saltar">Saltar al contenido</a>
+
+  <!-- Cabecera -->
+  <header id="cabecera">
+
+    <a href="index.html" class="marca">
+      <img src="media/img/logo-star-wars.png" alt="Star Wars: ir a la página de inicio" />
+    </a>
+
+    <nav id="menu" aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html" aria-current="page">
+          <i class="fa-solid fa-house" aria-hidden="true"></i> Inicio</a></li>
+        <li><a href="#sobre">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i> La saga</a></li>
+        <li><a href="#nave">
+          <i class="fa-solid fa-rocket" aria-hidden="true"></i> La nave</a></li>
+
+        <li class="con-submenu">
+          <a href="pages/peliculas.html">
+            <i class="fa-solid fa-film" aria-hidden="true"></i> Películas</a>
+          <ul class="submenu">
+            <li><a href="pages/peliculas.html#precuelas">Precuelas</a></li>
+            <li><a href="pages/peliculas.html#originales">Trilogía original</a></li>
+            <li><a href="pages/peliculas.html#secuelas">Secuelas</a></li>
+          </ul>
+        </li>
+
+        <li><a href="pages/videos.html">
+          <i class="fa-solid fa-play" aria-hidden="true"></i> Videos</a></li>
+        <li><a href="pages/academia.html">
+          <i class="fa-solid fa-jedi" aria-hidden="true"></i> Academia</a></li>
+        <li><a href="pages/holocron.html">
+          <i class="fa-solid fa-cube" aria-hidden="true"></i> Holocrón</a></li>
+        <li><a href="pages/cronologia.html"><i class="fa-solid fa-timeline" aria-hidden="true"></i> Cronología</a></li>
+        <li><a href="#enlaces">
+          <i class="fa-solid fa-link" aria-hidden="true"></i> Enlaces</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main id="contenido">
+
+    <section id="inicio">
+      <h1>
+        <img src="media/img/logo-star-wars.png" alt="Star Wars" width="320" />
+      </h1>
+      <p>
+        Las nueve películas de la saga Skywalker, estrenadas entre
+        <strong>1977</strong> y <strong>2019</strong>.
+        <br />
+        Una historia contada en <em>tres trilogías</em>.
+      </p>
+    </section>
+
+    <!-- Sobre la saga -->
+    <section id="sobre" class="seccion" aria-labelledby="titulo-sobre">
+      <article>
+        <h2 id="titulo-sobre">Sobre la saga</h2>
+
+        <p>
+          Star Wars es una <strong>saga cinematográfica</strong> creada por George Lucas.
+          La primera película se estrenó en <mark>1977</mark> y cambió para siempre la
+          industria del cine.
+        </p>
+
+        <p>
+          El presupuesto original fue de <del>8 millones</del> <ins>11 millones</ins>
+          de dólares. Recaudó más de 775<sup>1</sup> millones.
+        </p>
+
+        <hr />
+
+        <h3>Lo que define a la saga</h3>
+        <ul class="lista-datos">
+          <li>Tres trilogías estrenadas a lo largo de 42 años</li>
+          <li>Una banda sonora compuesta por John Williams</li>
+          <li>Efectos visuales que fundaron la industria moderna</li>
+          <li>Un universo expandido de series, libros y videojuegos</li>
+        </ul>
+
+        <p><small><sup>1</sup> Fuente: datos aproximados de taquilla mundial.</small></p>
+      </article>
+    </section>
+
+    <!-- La nave -->
+    <section id="nave" class="seccion" aria-labelledby="titulo-nave">
+      <h2 id="titulo-nave">El Halcón Milenario</h2>
+
+      <figure class="marco-nave">
+        <span class="sello">Clase YT-1300</span>
+        <img src="media/img/halcon-640x380.png"
+             alt="El Halcón Milenario, la nave carguera corelliana de Han Solo, vista de frente"
+             srcset="media/img/halcon-1280x760.png 1280w,
+                     media/img/halcon-640x380.png   640w,
+                     media/img/halcon-320x190.png   320w"
+             sizes="(max-width: 800px) 100vw, 750px" />
+        <figcaption>
+          La imagen mantiene la proporción 16:9 con <code>aspect-ratio</code> y se recorta
+          sin deformarse con <code>object-fit: cover</code>.
+        </figcaption>
+      </figure>
+
+      <p>
+        <a href="pages/videos.html">Mira al Halcón Milenario cruzando el espacio en la página de videos</a>.
+      </p>
+    </section>
+
+    <!-- Orden de visionado -->
+    <section id="orden" class="seccion" aria-labelledby="titulo-orden">
+      <h2 id="titulo-orden">Orden cronológico de la historia</h2>
+
+      <ol class="lista-orden">
+        <li>La Amenaza Fantasma <small>(1999)</small></li>
+        <li>El Ataque de los Clones <small>(2002)</small></li>
+        <li>La Venganza de los Sith <small>(2005)</small></li>
+        <li>Una Nueva Esperanza <small>(1977)</small></li>
+        <li>El Imperio Contraataca <small>(1980)</small></li>
+        <li>El Retorno del Jedi <small>(1983)</small></li>
+        <li>El Despertar de la Fuerza <small>(2015)</small></li>
+        <li>Los Últimos Jedi <small>(2017)</small></li>
+        <li>El Ascenso de Skywalker <small>(2019)</small></li>
+      </ol>
+
+      <p><small>Fíjate en los años: el orden de la historia no es el de estreno.</small></p>
+      <p><a href="pages/peliculas.html">Conoce la ficha de cada película</a>.</p>
+    </section>
+
+    <!-- Dato complementario -->
+    <aside class="dato-curioso" aria-labelledby="titulo-dato">
+      <h2 id="titulo-dato"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> ¿Sabías que…?</h2>
+      <p>
+        El Halcón Milenario hizo «el corredor de Kessel en menos de doce pársecs».
+        Un pársec es una unidad de <em>distancia</em>, no de tiempo.
+      </p>
+    </aside>
+
+    <div id="cita">
+      <p>Que la Fuerza te acompañe.</p>
+    </div>
+
+    <!-- Enlaces externos -->
+    <section id="enlaces" class="seccion" aria-labelledby="titulo-enlaces">
+      <h2 id="titulo-enlaces">Para saber más</h2>
+
+      <ul class="lista-enlaces">
+        <li>
+          <a href="https://www.starwars.com/" target="_blank" rel="noopener">
+            Sitio oficial de Star Wars
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            <span class="solo-lector">(se abre en una pestaña nueva)</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://es.wikipedia.org/wiki/Star_Wars" target="_blank" rel="noopener">
+            Star Wars en Wikipedia
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            <span class="solo-lector">(se abre en una pestaña nueva)</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/es/docs/Web/CSS/position"
+             target="_blank" rel="noopener">
+            La propiedad position en MDN
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            <span class="solo-lector">(se abre en una pestaña nueva)</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/video"
+             target="_blank" rel="noopener">
+            La etiqueta &lt;video&gt; en MDN
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            <span class="solo-lector">(se abre en una pestaña nueva)</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Pie -->
+  <footer id="pie">
+
+    <h2>Contacto</h2>
+
+    <address>
+      <p><i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        <a href="mailto:contacto@lasagaskywalker.pe">contacto@lasagaskywalker.pe</a></p>
+      <p><i class="fa-solid fa-phone" aria-hidden="true"></i> (01) 555-1977</p>
+      <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Lima, Perú</p>
+    </address>
+
+    <p class="redes">
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube (pestaña nueva)">
+        <i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram (pestaña nueva)">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+      <a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok (pestaña nueva)">
+        <i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+    </p>
+
+    <p><small>Sitio de práctica del curso Diseño y Desarrollo Web · ISIL</small></p>
+
+  </footer>
+
+  <!-- Volver arriba -->
+  <a href="#inicio" id="btn-arriba" aria-label="Volver arriba">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </a>
+
+</body>
+
+</html>

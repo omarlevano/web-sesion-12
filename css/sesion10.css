@@ -1,0 +1,262 @@
+/* Fuentes de diversos orígenes */
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("../media/fonts/orbitron.ttf") format("truetype");
+}
+
+/* Selector universal: todas las cajas miden con su padding incluido */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Portada: dos soles con degradado radial */
+.portada-holo {
+  margin: 0 -20px 20px;
+  padding: 4.5rem 1.25rem;
+  text-align: center;
+  background:
+    radial-gradient(circle at 78% 30%, #FFF4C2 0 3%, #FFB347 6%, transparent 14%),
+    radial-gradient(circle at 88% 42%, #FFE7A3 0 2%, #FF8C42 4%, transparent 10%),
+    linear-gradient(to bottom, #1B1035, #6B2E3E 70%, #C9653A);
+}
+
+.portada-holo h1 {
+  margin: 0.5rem 0;
+  font-family: "Orbitron", "Arial Black", sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.08em;
+  color: var(--color-acento);
+  text-transform: uppercase;
+}
+
+.portada-holo p {
+  font-size: 1.15rem;
+}
+
+/* Planeta SVG con <img>: nítido en cualquier tamaño */
+.planeta {
+  width: 7rem;
+  height: auto;
+}
+
+/* ::after decorativo: línea de luz bajo cada h2 de esta página */
+.seccion h2::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 3px;
+  margin-top: 0.5rem;
+  background: linear-gradient(to right, var(--color-acento), transparent);
+}
+
+/* CSS Grid: 3 columnas iguales con repeat() y la unidad fr */
+.grid-saga {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 110px;
+  gap: 12px 15px;
+}
+
+.ep {
+  display: grid;
+  place-items: center;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 212, 71, 0.3);
+  border-radius: 0.75rem;
+  text-align: center;
+  font-size: 0.95rem;
+  background: linear-gradient(160deg, #2E2E4A, #14142A);
+  transition: transform 0.3s ease;
+}
+
+.ep:hover {
+  transform: translateY(-4px);
+}
+
+.ep span {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.6em;
+  color: var(--color-acento);
+}
+
+/* La trilogía original, resaltada con otro degradado */
+.ep.original {
+  background: linear-gradient(160deg, #5A4A12, #2E2E4A);
+}
+
+/* CSS Grid con áreas: ficha de planeta */
+.ficha-planeta {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "cabecera cabecera"
+    "datos    texto"
+    "pie      pie";
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.f-cabecera { grid-area: cabecera; }
+.f-datos    { grid-area: datos; }
+.f-texto    { grid-area: texto; }
+.f-pie      { grid-area: pie; }
+
+.ficha-planeta > div {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: rgba(11, 11, 26, 0.6);
+  border: 1px solid rgba(255, 212, 71, 0.25);
+}
+
+.f-cabecera {
+  background: linear-gradient(to right, #C9653A, #E0A84F) !important;
+}
+
+.f-cabecera h3 {
+  margin: 0;
+  font-family: "Orbitron", sans-serif;
+  color: #0B0B1A;
+  letter-spacing: 0.1em;
+}
+
+.f-datos dl {
+  margin: 0;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.f-datos dt {
+  color: var(--color-acento);
+  font-size: 0.85em;
+}
+
+.f-datos dd {
+  margin: 0 0 0.6em;
+}
+
+/* Sables de luz, degradado lineal + selector por atributo */
+.sables {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.sable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hoja {
+  width: 14px;
+  height: 160px;
+  border-radius: 8px 8px 2px 2px;
+  background: linear-gradient(to right, var(--brillo), #FFFFFF 40%, #FFFFFF 60%, var(--brillo));
+  box-shadow: 0 0 6px var(--brillo);
+  opacity: 0.55;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.empuñadura {
+  width: 22px;
+  height: 60px;
+  border-radius: 4px;
+  background: repeating-linear-gradient(to bottom, #9AA0A6 0 6px, #3A3F44 6px 10px);
+}
+
+.sable:hover .hoja {
+  opacity: 1;
+  box-shadow: 0 0 18px 6px var(--brillo);
+}
+
+/* [data-color="…"]: el color de cada sable sale de su atributo */
+.sable[data-color="azul"]   { --brillo: #3FA9F5; }
+.sable[data-color="verde"]  { --brillo: #2ECC71; }
+.sable[data-color="morado"] { --brillo: #9B59B6; }
+.sable[data-color="rojo"]   { --brillo: #FF3B3B; }
+
+/* Mapa: SVG en el HTML + degradado radial repetitivo */
+.radar {
+  border-radius: 1rem;
+  overflow: hidden;
+  background: repeating-radial-gradient(circle at 15% 75%,
+              #0B0B1A 0 38px, rgba(255, 212, 71, 0.18) 38px 40px);
+}
+
+.mapa-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Texto en columnas */
+.texto-columnas {
+  column-count: 3;
+  column-width: 220px;
+  column-gap: 2.5rem;
+  column-rule: 1px solid rgba(255, 212, 71, 0.3);
+}
+
+.texto-columnas h2 {
+  column-span: all;
+}
+
+/* ::before, ::after y selectores por atributo */
+.cita {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.2rem;
+  color: var(--color-acento);
+}
+
+.cita::before { content: open-quote; }
+.cita::after  { content: close-quote; }
+
+/* ^= empieza con, $= termina en, *= contiene */
+a[href^="http"]::after {
+  content: " ↗";
+}
+
+a[href^="mailto:"]::before {
+  content: "✉ ";
+}
+
+/* Enlaces a otras páginas .html del sitio: subrayado punteado */
+#pie a[href$=".html"] {
+  border-bottom: 1px dashed var(--color-acento);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .grid-saga {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ficha-planeta {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "cabecera"
+      "datos"
+      "texto"
+      "pie";
+  }
+
+  .portada-holo h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grid-saga {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 80px;
+  }
+
+  .portada-holo {
+    margin: 0 -10px 20px;
+  }
+}

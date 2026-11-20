@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Academia Jedi | Filmografía, inscripción y locaciones de Star Wars</title>
+  <meta name="description" content="Tabla con las nueve películas de la saga Skywalker, formulario de inscripción a la Academia Jedi y el mapa de Tatooine en la Tierra." />
+
+  <link rel="icon" type="image/png" href="../media/favicon/favicon-32.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="../media/favicon/favicon.ico" />
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/estilo.css" />
+</head>
+
+<body>
+
+  <a href="#contenido" class="saltar">Saltar al contenido</a>
+
+  <header id="cabecera">
+
+    <a href="../index.html" class="marca">
+      <img src="../media/img/logo-star-wars.png" alt="Star Wars: ir a la página de inicio" />
+    </a>
+
+    <nav id="menu" aria-label="Menú principal">
+      <ul>
+        <li><a href="../index.html">
+          <i class="fa-solid fa-house" aria-hidden="true"></i> Inicio</a></li>
+        <li><a href="../index.html#sobre">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i> La saga</a></li>
+        <li class="con-submenu">
+          <a href="peliculas.html">
+            <i class="fa-solid fa-film" aria-hidden="true"></i> Películas</a>
+          <ul class="submenu">
+            <li><a href="peliculas.html#precuelas">Precuelas</a></li>
+            <li><a href="peliculas.html#originales">Trilogía original</a></li>
+            <li><a href="peliculas.html#secuelas">Secuelas</a></li>
+          </ul>
+        </li>
+        <li><a href="videos.html">
+          <i class="fa-solid fa-play" aria-hidden="true"></i> Videos</a></li>
+        <li><a href="academia.html" aria-current="page">
+          <i class="fa-solid fa-jedi" aria-hidden="true"></i> Academia</a></li>
+        <li><a href="holocron.html">
+          <i class="fa-solid fa-cube" aria-hidden="true"></i> Holocrón</a></li>
+        <li><a href="cronologia.html"><i class="fa-solid fa-timeline" aria-hidden="true"></i> Cronología</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <h1 class="titulo-pagina">Academia Jedi</h1>
+    <p class="intro-pagina">Repasa la saga, inscríbete en la academia y visita Tatooine… en la Tierra.</p>
+
+    <!-- Tabla -->
+    <section id="filmografia" class="seccion">
+      <h2><i class="fa-solid fa-table" aria-hidden="true"></i> Filmografía de la saga Skywalker</h2>
+
+      <div class="tabla-scroll">
+        <table class="tabla-saga">
+          <caption>Las nueve películas en orden de la historia</caption>
+
+          <thead>
+            <tr>
+              <th scope="col">Trilogía</th>
+              <th scope="col">Episodio</th>
+              <th scope="col">Título</th>
+              <th scope="col">Estreno</th>
+              <th scope="col" class="opcional">Director</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="3">Precuelas</th>
+              <td>I</td><td>La Amenaza Fantasma</td><td>1999</td><td class="opcional">George Lucas</td>
+            </tr>
+            <tr><td>II</td><td>El Ataque de los Clones</td><td>2002</td><td class="opcional">George Lucas</td></tr>
+            <tr><td>III</td><td>La Venganza de los Sith</td><td>2005</td><td class="opcional">George Lucas</td></tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="3">Original</th>
+              <td>IV</td><td>Una Nueva Esperanza</td><td>1977</td><td class="opcional">George Lucas</td>
+            </tr>
+            <tr><td>V</td><td>El Imperio Contraataca</td><td>1980</td><td class="opcional">Irvin Kershner</td></tr>
+            <tr><td>VI</td><td>El Retorno del Jedi</td><td>1983</td><td class="opcional">Richard Marquand</td></tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="3">Secuelas</th>
+              <td>VII</td><td>El Despertar de la Fuerza</td><td>2015</td><td class="opcional">J. J. Abrams</td>
+            </tr>
+            <tr><td>VIII</td><td>Los Últimos Jedi</td><td>2017</td><td class="opcional">Rian Johnson</td></tr>
+            <tr><td>IX</td><td>El Ascenso de Skywalker</td><td>2019</td><td class="opcional">J. J. Abrams</td></tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td colspan="5">Star Wars: idea original de George Lucas</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <p class="nota-tabla"><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
+        En el celular se oculta la columna «Director» con una media query.</p>
+    </section>
+
+    <!-- Formulario de inscripción -->
+    <section id="inscripcion" class="seccion">
+      <h2><i class="fa-solid fa-jedi" aria-hidden="true"></i> Inscripción a la Academia</h2>
+      <p>Los campos con <span class="obligatorio">*</span> son obligatorios.</p>
+
+      <form class="formulario" name="academia" action="gracias.html" method="get">
+
+        <fieldset>
+          <legend>Tu identidad</legend>
+
+          <div class="campo">
+            <label for="nombre">Nombre de aprendiz <span class="obligatorio">*</span></label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej.: Rey" required minlength="2" maxlength="40" />
+          </div>
+
+          <div class="campo">
+            <label for="correo">Holocorreo <span class="obligatorio">*</span></label>
+            <input type="email" id="correo" name="correo" placeholder="rey@jakku.gal" required />
+          </div>
+
+          <div class="campo">
+            <label for="especie">Especie <span class="obligatorio">*</span></label>
+            <select id="especie" name="especie" required>
+              <option value="">Elige tu especie</option>
+              <option value="humano">Humano</option>
+              <option value="wookiee">Wookiee</option>
+              <option value="twilek">Twi'lek</option>
+              <option value="togruta">Togruta</option>
+              <option value="droide">Droide (no aceptado… todavía)</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="edad">Edad <span class="obligatorio">*</span></label>
+            <input type="number" id="edad" name="edad" value="18" min="8" max="900" required />
+          </div>
+
+          <div class="campo">
+            <span class="etiqueta-grupo">Lado de la Fuerza</span>
+            <div class="opciones">
+              <label><input type="radio" name="lado" value="luminoso" checked /> Luminoso</label>
+              <label><input type="radio" name="lado" value="oscuro" /> Oscuro</label>
+              <label><input type="radio" name="lado" value="gris" /> Ninguno (gris)</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tu entrenamiento</legend>
+
+          <div class="campo">
+            <span class="etiqueta-grupo">Habilidades</span>
+            <div class="opciones">
+              <label><input type="checkbox" name="habilidades" value="pilotaje" checked /> Pilotaje</label>
+              <label><input type="checkbox" name="habilidades" value="sable" /> Combate con sable</label>
+              <label><input type="checkbox" name="habilidades" value="telequinesis" /> Telequinesis</label>
+              <label><input type="checkbox" name="habilidades" value="diplomacia" /> Diplomacia</label>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="sable">Color de tu sable de luz</label>
+            <input type="color" id="sable" name="sable" value="#2ecc71" />
+          </div>
+
+          <div class="campo">
+            <label for="nivel">Nivel de la Fuerza (1 a 10)</label>
+            <input type="range" id="nivel" name="nivel" min="1" max="10" step="1" value="5" />
+          </div>
+
+          <div class="campo">
+            <label for="ingreso">Fecha de ingreso <span class="obligatorio">*</span></label>
+            <input type="date" id="ingreso" name="ingreso" min="2026-11-01" required />
+          </div>
+
+          <div class="campo">
+            <label for="holograma">Tu holograma (foto)</label>
+            <input type="file" id="holograma" name="holograma" accept="image/*" />
+          </div>
+
+          <div class="campo">
+            <label for="maestro">Código de maestro</label>
+            <input type="text" id="maestro" name="maestro" placeholder="YO-900"
+                   pattern="[A-Z]{2}-[0-9]{3}" title="Dos letras mayúsculas, guion y tres números" />
+          </div>
+
+          <div class="campo campo-ancho">
+            <label for="motivo">¿Por qué quieres ser Jedi?</label>
+            <textarea id="motivo" name="motivo" rows="4" maxlength="400"
+                      placeholder="Hazlo o no lo hagas, pero no lo intentes…"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="botones">
+          <button type="submit" class="boton-enviar"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Enviar solicitud</button>
+          <button type="reset" class="boton-limpiar">Limpiar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Mapa responsive -->
+    <section id="locacion" class="seccion">
+      <h2><i class="fa-solid fa-earth-africa" aria-hidden="true"></i> Visita Tatooine en la Tierra</h2>
+      <p>El hotel Sidi Driss, en Matmata (Túnez), fue la casa de Luke Skywalker en <em>Una Nueva Esperanza</em>.</p>
+
+      <div class="mapa">
+        <iframe src="https://www.google.com/maps?q=Hotel+Sidi+Driss,+Matmata,+Tunisia&amp;output=embed"
+                title="Mapa del hotel Sidi Driss en Matmata, Túnez"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <p class="nota-tabla"><i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        Si el mapa no carga al abrir el archivo con doble clic, ábrelo con Live Server.</p>
+    </section>
+
+  </main>
+
+  <footer id="pie">
+    <p><a href="../index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Volver a la página de inicio</a></p>
+    <p><small>Sitio de práctica del curso Diseño y Desarrollo Web · ISIL</small></p>
+  </footer>
+
+  <a href="#contenido" id="btn-arriba" aria-label="Volver arriba">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </a>
+
+</body>
+
+</html>
